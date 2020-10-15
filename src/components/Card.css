@@ -1,0 +1,31 @@
+.your-dialog-classname {
+    display: block; 
+    max-width: 100vw; 
+    height: 150px;
+}
+
+.no-border{
+  border:none;
+}
+
+.first-column {
+  	width: 40%;
+  	float: left;
+}
+
+.second-column {
+  	width: 40%;
+  	float: right;
+}
+
+.divBox {
+	border: 5px solid #475867;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+.divContent {
+	padding: 15px;
+
+}

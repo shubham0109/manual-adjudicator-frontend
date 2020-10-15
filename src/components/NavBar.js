@@ -23,25 +23,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function NavBar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{ background: '#2E3B55' }}>
         <Toolbar>
-          
           <Typography variant="h6" className={classes.title}>
             Manual Adjudicator System
           </Typography>
-          <IconButton aria-label="show 17 new notifications" color="inherit">
+        {/*  <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
-                <NewReleasesIcon style={{ color: '#e8b307' }}/>
+                <NewReleasesIcon style={{ color: '#70A2D4' }}/>
               </Badge>
-          </IconButton>
-          <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon style={{ color: '#e8b307' }}/>
+          </IconButton> */}
+          <IconButton aria-label="show 4 new notifications" color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <NotificationsIcon style={{ color: '#70A2D4' }}/>
               </Badge>
           </IconButton>
           <IconButton
@@ -52,7 +51,7 @@ export default function ButtonAppBar() {
              // onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle style={{color: '#a1bfbe'}} />
+              <AccountCircle style={{color: '#70A2D4'}} />
           </IconButton>
           <Button color="inherit">Logout</Button>
         </Toolbar>
