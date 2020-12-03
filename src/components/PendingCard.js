@@ -130,8 +130,8 @@ class PendingCard extends React.Component {
   isPending = () => {
     console.log("inside pending");
     console.log("id: ", this.props.data.id);
-
     this.props.displayNextItem();
+    //this.props.handleClose();
   }
 
   isClosing = () => {

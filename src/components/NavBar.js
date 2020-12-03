@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar() {
   const classes = useStyles();
 
+  
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{ background: '#2E3B55' }}>
@@ -39,7 +40,7 @@ export default function NavBar() {
               </Badge>
           </IconButton> */}
           <IconButton aria-label="show 4 new notifications" color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge color="secondary">
                 <NotificationsIcon style={{ color: '#70A2D4' }}/>
               </Badge>
           </IconButton>
