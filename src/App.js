@@ -32,9 +32,11 @@ class App extends Component {
 
   componentDidMount() {
     var acc_tok = localStorage.getItem("react-token");
+    var preferred_username = localStorage.getItem("preferred-username");
+    console.log("preferred_username: ", preferred_username);
     console.log("access_token: ", acc_tok);
-    
-    axios.get(`http://localhost:8080/api/job/user/1`)
+
+    axios.get(`http://localhost:8080/api/job/user/${preferred_username}`)
       .then(res => {
         const jobs = res.data;
         console.log("jobs hh: ", jobs);

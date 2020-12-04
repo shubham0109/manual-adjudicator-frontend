@@ -8,7 +8,7 @@ import * as Keycloak from 'keycloak-js'
 //keycloak init options
 
 let initOptions = {
-    url: 'http://localhost:8180/auth', realm: 'react-keycloack', clientId: 'login-app', onLoad: 'login-required'
+    url: 'http://localhost:8180/auth', realm: 'react-keycloack', clientId: 'login-app', onLoad: 'login-required', scope: 'openid',
 }
 
 
@@ -47,6 +47,8 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) => {
     console.log("keycloak: ", keycloak);
     localStorage.setItem("react-token", keycloak.token);
     localStorage.setItem("react-refresh-token", keycloak.refreshToken);
+    console.log("keycloak1: ", keycloak.idTokenParsed);
+    localStorage.setItem("preferred-username", keycloak.idTokenParsed.preferred_username);
 
     setTimeout(() => {
         keycloak.updateToken(70).success((refreshed) => {
