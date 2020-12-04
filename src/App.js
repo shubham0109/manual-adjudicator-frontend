@@ -36,7 +36,11 @@ class App extends Component {
     console.log("preferred_username: ", preferred_username);
     console.log("access_token: ", acc_tok);
 
-    axios.get(`http://localhost:8080/api/job/user/${preferred_username}`)
+    axios.get(`http://localhost:8080/api/job/user/`,{
+      params: {
+        username: preferred_username,
+      }
+    })
       .then(res => {
         const jobs = res.data;
         console.log("jobs hh: ", jobs);
